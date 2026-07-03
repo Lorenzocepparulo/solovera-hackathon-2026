@@ -15,8 +15,7 @@ export function initComets(): void {
     comet.style.setProperty('--dx', (Math.cos(ang * Math.PI / 180) * 150) + 'px')
     comet.style.setProperty('--dy', (Math.sin(ang * Math.PI / 180) * 150) + 'px')
     comet.style.display = ''
-    comet.style.animation = 'none'
-    void comet.offsetHeight
+    comet.getAnimations().forEach(a => a.cancel())
     comet.style.animation = ''
     setTimeout(() => { comet.style.display = 'none' }, 1200)
   }

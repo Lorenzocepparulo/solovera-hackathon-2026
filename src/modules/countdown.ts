@@ -2,6 +2,8 @@ import { CONFIG } from '../config'
 
 export function initCountdown(): void {
   const T = CONFIG.LAUNCH_DATE
+  const ids = ['d', 'h', 'm', 's'] as const
+  const els = ids.map(id => document.getElementById(`cd-${id}`))
 
   function update(): void {
     const now = Date.now()
@@ -10,12 +12,10 @@ export function initCountdown(): void {
     const hh = Math.floor((diff % 864e5) / 36e5)
     const mm = Math.floor((diff % 36e5) / 6e4)
     const ss = Math.floor((diff % 6e4) / 1e3)
-
-    const ids = ['d', 'h', 'm', 's'] as const
     const vals = [dd, hh, mm, ss]
-    for (let i = 0; i < ids.length; i++) {
-      const els = document.querySelectorAll(`#cd-${ids[i]}`)
-      els.forEach(el => el.textContent = String(vals[i]).padStart(2, '0'))
+
+    for (let i = 0; i < els.length; i++) {
+      if (els[i]) els[i]!.textContent = String(vals[i]).padStart(2, '0')
     }
 
     const cd = document.getElementById('countdown')
