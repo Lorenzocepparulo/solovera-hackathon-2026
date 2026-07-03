@@ -1,0 +1,17 @@
+{
+  "name": "solovera-hackathon-2026",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && bun run build:functions",
+    "build:functions": "bunx esbuild functions/subscribe.ts functions/api/seats.ts --outdir=dist/functions --format=esm --target=es2022 --bundle --external:__STATIC_CONTENT_MANIFEST --external:cf --outbase=functions",
+    "preview": "vite preview",
+    "deploy": "bun run build && bunx wrangler pages deploy dist --project-name=solovera-hackathon-2026"
+  },
+  "devDependencies": {
+    "typescript": "^5.7",
+    "vite": "^6.3",
+    "esbuild": "^0.25"
+  }
+}

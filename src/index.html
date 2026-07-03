@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solovera AI Hackathon — 24 ore in orbita</title>
+<meta name="description" content="Il primo Solovera AI Hackathon: 24 ore online per costruire un progetto AI funzionante. 26–27 settembre, solo 20 posti. Premio: €5.000 in servizi + €500 cash.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Solovera AI Hackathon — 24 ore in orbita 🚀">
+<meta property="og:description" content="26–27 settembre · 100% online · Solo 20 posti. Costruisci un progetto AI in 24 ore e vinci €5.000 in servizi + €500 cash.">
+<meta property="og:url" content="https://hackaton.solovera.work">
+<meta property="og:image" content="https://hackaton.solovera.work/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Solovera AI Hackathon — 24 ore in orbita 🚀">
+<meta name="twitter:description" content="26–27 settembre · 100% online · Solo 20 posti.">
+<meta name="twitter:image" content="https://hackathon.solovera.it/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script type="module" src="/main.ts"></script>
+</head>
+<body>
+<canvas id="stars"></canvas>
+<div class="wrap">
+<div class="container">
+
+  <nav>
+  <div class="logo">SOLOVERA<span>.IT</span></div>
+  <a class="nav-cta" href="#iscriviti">ISCRIVITI →</a>
+  </nav>
+
+  <header class="hero">
+  <div class="tminus"><span class="dot"></span> MISSIONE #001 · 26–27 SETTEMBRE · 100% ONLINE</div>
+  <h1>24 ore <span class="orbit-word">in orbita</span>.<br>Poi si atterra e si pitcha.</h1>
+  <p class="sub">Il primo <strong>Solovera AI Hackathon</strong>. Si decolla <strong>sabato 26 settembre alle 9:00</strong>, si costruisce senza sosta per un giorno e una notte, si atterra <strong>domenica alle 9:00</strong>. Nel pomeriggio: pitch, giuria, risultati. Tutto online, da dove vuoi.</p>
+  <div class="hero-ctas">
+  <a class="btn-main" href="#iscriviti">Prenota il posto — <span id="seats-cta">17</span> disponibili</a>
+  <a class="btn-ghost" href="#programma">VEDI LA MISSIONE ↓</a>
+<a class="btn-ghost" href="/regolamento.pdf" target="_blank">SCARICA IL REGOLAMENTO 📄</a>
+  </div>
+  <div class="countdown" id="countdown" aria-label="Countdown al lancio">
+  <div class="cd-cell"><div class="num" id="cd-d">--</div><div class="lab">Giorni</div></div>
+  <div class="cd-cell"><div class="num" id="cd-h">--</div><div class="lab">Ore</div></div>
+  <div class="cd-cell"><div class="num" id="cd-m">--</div><div class="lab">Minuti</div></div>
+  <div class="cd-cell"><div class="num" id="cd-s">--</div><div class="lab">Secondi</div></div>
+  </div>
+  <div class="cred">
+  <div><div class="n big-seats"><span id="seats-hero">17</span>/20</div><div class="l">Posti rimasti — quando finiscono, finiscono</div></div>
+  </div>
+  </header>
+
+  <section id="missione">
+  <div class="sec-head reveal">
+  <div class="eyebrow">La missione</div>
+  <h2>Un'idea AI. 24 ore. Zero scuse.</h2>
+  <p>Non un corso, non un webinar. Entri con un'idea, esci con un agente AI funzionante — e lo presenti davanti a una giuria vera.</p>
+  <div class="online-badge reveal"><span class="dot"></span> EVENTO 100% ONLINE — PARTECIPI DA DOVE VUOI</div>
+  </div>
+  <div class="grid3">
+  <div class="card reveal"><div class="ico">🚀</div><h3>Build reale</h3><p>Costruisci un progetto AI funzionante in 24 ore consecutive. Demo live, non slide.</p></div>
+  <div class="card reveal"><div class="ico">🌌</div><h3>La notte è il bello</h3><p>Si codifica anche di notte. È lì che le idee prendono forma e i progetti diventano memorabili.</p></div>
+  <div class="card reveal"><div class="ico">🛰️</div><h3>Pitch e verdetto</h3><p>Domenica pomeriggio presenti il progetto. La giuria valuta, i risultati arrivano in giornata.</p></div>
+  </div>
+  </section>
+
+  <section id="programma" class="orbit-sec">
+  <div class="sec-head reveal">
+  <div class="eyebrow">Piano di volo</div>
+  <h2>Dal decollo all'atterraggio</h2>
+  </div>
+  <div class="timeline" id="timeline">
+  <div class="ship" id="ship" aria-hidden="true">🚀</div>
+  <div class="day-tag reveal">Sabato 26 settembre</div>
+  <div class="t-item launch reveal">
+  <div class="when">09:00 · Decollo</div>
+  <h3>Briefing e via ai motori</h3>
+  <p>Presentazione della sfida, saluti dell'equipaggio e partenza ufficiale delle 24 ore.</p>
+  </div>
+  <div class="t-item reveal">
+  <div class="when">Giornata · In orbita</div>
+  <h3>Build no-stop</h3>
+  <p>Sviluppo libero con il supporto del team Solovera in un canale dedicato. Mentorship, caffè e zero riunioni inutili.</p>
+  </div>
+  <div class="t-item reveal">
+  <div class="when">Notte · Spazio profondo</div>
+  <h3>La traversata notturna</h3>
+  <p>Chi resiste alla notte arriva più lontano. Qui si separano i progetti buoni da quelli memorabili.</p>
+  </div>
+  <div style="height:20px"></div>
+  <div class="day-tag reveal">Domenica 27 settembre</div>
+  <div class="t-item landing reveal">
+  <div class="when">09:00 · Atterraggio</div>
+  <h3>Stop al codice</h3>
+  <p>Le 24 ore finiscono. Si congela il progetto, si respira, ci si prepara al pitch.</p>
+  </div>
+  <div class="t-item landing reveal">
+  <div class="when">Pomeriggio · Rientro a terra</div>
+  <h3>Pitch, giuria e risultati</h3>
+  <p>Ogni partecipante presenta il proprio progetto in call. La giuria delibera e i vincitori vengono annunciati in giornata.</p>
+  </div>
+  </div>
+  </section>
+
+  <section id="premio">
+  <div class="sec-head reveal">
+  <div class="eyebrow">Il bottino</div>
+  <h2>Non vinci un gadget. Vinci una rampa di lancio.</h2>
+  </div>
+  <div class="prize-box reveal">
+  <div class="prize-val" id="prize-counter" data-target="5000">€0</div>
+  <div class="prize-plus">in servizi + €500 cash</div>
+  <div class="prize-list">
+  <div><span class="st">✦</span><span><b>Implementazione tecnica</b> del tuo progetto con i developer Solovera</span></div>
+  <div><span class="st">✦</span><span><b>Supporto marketing e strategico</b> per portarlo sul mercato</span></div>
+  <div><span class="st">✦</span><span><b>Accesso alla rete clienti</b> Solovera: opportunità commerciali dirette</span></div>
+  <div><span class="st">✦</span><span><b>2 giornate formative</b> con il team — consulenza, brainstorming, pranzo incluso</span></div>
+  <div><span class="st">✦</span><span><b>Case study pubblico</b>: articolo LinkedIn + pagina su solovera.it</span></div>
+  <div><span class="st">✦</span><span><b>6 mesi nella rete partner</b> Solovera, con collaborazioni retribuite possibili</span></div>
+  </div>
+  </div>
+  </section>
+
+  <section id="giuria">
+  <div class="sec-head reveal">
+  <div class="eyebrow">Il controllo missione</div>
+  <h2>Chi giudica i progetti</h2>
+  <p>Niente giurie di facciata. Chi valuta il tuo progetto costruisce AI e business ogni giorno.</p>
+  </div>
+  <div class="jury">
+  <div class="jury-card reveal">
+  <div class="avatar"><img src="/images/samuele-bertocco.jpg" alt="Samuele Bertocco"></div>
+  <h3>Samuele Bertocco</h3>
+  <p>Programmatore AI full stack</p>
+  </div>
+  <div class="jury-card reveal">
+  <div class="avatar"><img src="/images/lorenzo-cepparulo.jpg" alt="Lorenzo Cepparulo"></div>
+  <h3>Lorenzo Cepparulo</h3>
+  <p>Esperto marketing e co-founder Solovera</p>
+  </div>
+  <div class="jury-card reveal">
+  <div class="avatar"><img src="/images/maurizio-crepaldi.jpg" alt="Maurizio Crepaldi"></div>
+  <h3>Maurizio Crepaldi</h3>
+  <p>Co-founder Solovera, imprenditore e formatore</p>
+  </div>
+  <div class="jury-card mystery reveal">
+  <div class="avatar">?</div>
+  <h3>Ospite a sorpresa</h3>
+  <p>Verrà annunciato prima del lancio. Resta sintonizzato!</p>
+  </div>
+  </div>
+  </section>
+
+  <section id="faq">
+  <div class="sec-head reveal">
+  <div class="eyebrow">FAQ</div>
+  <h2>Domande frequenti</h2>
+  </div>
+  <div class="faq">
+  <details>
+  <summary><span class="q-ico">👤</span> Chi può partecipare?</summary>
+  <div class="ans">Chiunque — sviluppatori, designer, product manager, studenti, appassionati di AI. Non serve essere esperti.</div>
+  </details>
+  <details>
+  <summary><span class="q-ico">💰</span> Quanto costa?</summary>
+  <div class="ans">L'evento è <strong>gratuito</strong>. Solo l'impegno è obbligatorio.</div>
+  </details>
+  <details>
+  <summary><span class="q-ico">🛠️</span> Servono competenze tecniche?</summary>
+  <div class="ans">È un hackathon, quindi saper programmare aiuta. Si partecipa anche da soli — designer, developer, product people: chiunque è il benvenuto!</div>
+  </details>
+  <details>
+  <summary><span class="q-ico">⭐</span> Come vengono valutati i progetti?</summary>
+  <div class="ans">Innovazione, complessità tecnica, impatto pratico e qualità della presentazione. La giuria Solovera valuta tutto.</div>
+  </details>
+  <details>
+  <summary><span class="q-ico">🎒</span> Cosa porto?</summary>
+  <div class="ans">Il tuo laptop, un'idea e tanta voglia di costruire. Noi portiamo il resto.</div>
+  </details>
+  </div>
+  </section>
+
+  <section id="iscriviti" class="form-sec">
+  <div class="sec-head reveal" style="text-align:center;max-width:none">
+  <div class="eyebrow">Prenota il tuo posto</div>
+  <h2>Iscriviti all'hackathon</h2>
+  <p style="max-width:500px;margin:16px auto 0">Solo 20 posti. Se sei arrivato fin qui, probabilmente sei il tipo di persona che vogliamo a bordo.</p>
+  </div>
+  <div class="form-box reveal">
+  <div class="seats-left"><span id="seats-form">17</span> posti rimasti</div>
+  <form id="hack-form" action="/subscribe" method="POST">
+  <div class="field">
+  <label for="name">Nome e Cognome</label>
+  <input type="text" id="name" name="name" required placeholder="Mario Rossi">
+  </div>
+  <div class="field">
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" required placeholder="mario@esempio.it">
+  </div>
+  <div class="field">
+  <label for="role">Ruolo</label>
+  <select id="role" name="role">
+  <option value="">Seleziona</option>
+  <option value="developer">Sviluppatore</option>
+  <option value="designer">Designer</option>
+  <option value="pm">Product Manager</option>
+  <option value="student">Studente</option>
+  <option value="other">Altro</option>
+  </select>
+  </div>
+  <div class="field">
+  <label for="phone">Numero di telefono</label>
+  <input type="tel" id="phone" name="phone" required placeholder="+39 3XX XXX XXXX">
+  </div>
+  <div class="field">
+  <label for="conferma">Conferma partecipazione</label>
+  <select id="conferma" name="conferma" required>
+  <option value="">Seleziona</option>
+  <option value="si">Sì, sono disponibile il 26-27 settembre per partecipare all'hackathon</option>
+  <option value="no">Purtroppo non posso</option>
+  </select>
+  </div>
+  <button type="submit" class="btn-main">Prenota il posto →</button>
+  </form>
+  <div class="form-success" id="form-success">
+  <div class="big">🚀</div>
+  <h3>Sei a bordo!</h3>
+  <p>Ti abbiamo preso nota. Riceverai conferma e dettagli via email nei prossimi giorni.</p>
+  <div class="lo-cd" style="margin-top:20px;font-size:.9rem">Alla prossima missione, astronauta.</div>
+  </div>
+  <div class="contact-banner">📩 Per info: <a href="mailto:info@solovera.it" style="color:var(--solar);text-decoration:none;border-bottom:1px dotted">info@solovera.it</a></div>
+  </div>
+  </section>
+
+  <footer>
+  <div>© Solovera 2026</div>
+  <div><a href="https://solovera.it">solovera.it</a> · <a href="mailto:info@solovera.it">info@solovera.it</a></div>
+  </footer>
+
+</div>
+</div>
+
+<div class="sticky-cta" id="sticky-cta">
+  <div class="txt">🚀 <span id="seats-sticky">17</span> posti</div>
+  <a href="#iscriviti">Iscriviti ora</a>
+</div>
+
+<div class="launch-overlay" id="launch-overlay">
+  <div class="lo-stars"></div>
+  <div class="lo-rocket">🚀</div>
+  <div class="lo-text">
+  <div class="lo-badge">✦ MISSIONE COMPLETA ✦</div>
+  <h2>Sei a bordo.</h2>
+  <p>Ci vediamo il 26 settembre alle 9:00.<br>Fino ad allora: prepara le idee, testa gli strumenti, dormi.</p>
+  <div class="lo-cd" id="lo-cd"></div>
+  </div>
+</div>
+</body>
+</html>
