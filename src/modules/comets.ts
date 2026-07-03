@@ -1,15 +1,24 @@
 export function initComets(): void {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
+  const comet = document.createElement('div')
+  comet.className = 'comet'
+  comet.style.display = 'none'
+  document.body.appendChild(comet)
+
   function spawn(): void {
-    const c = document.createElement('div')
-    c.className = 'comet'
-    c.style.left = (Math.random() * 80 + 10) + '%'
-    c.style.top = (Math.random() * 50) + '%'
+    if (document.hidden) return
+    comet.style.left = (Math.random() * 80 + 10) + '%'
+    comet.style.top = (Math.random() * 50) + '%'
     const ang = -30 + Math.random() * 60
-    c.style.setProperty('--ang', ang + 'deg')
-    c.style.setProperty('--dx', (Math.cos(ang * Math.PI / 180) * 150) + 'px')
-    c.style.setProperty('--dy', (Math.sin(ang * Math.PI / 180) * 150) + 'px')
-    document.body.appendChild(c)
-    setTimeout(() => c.remove(), 1200)
+    comet.style.setProperty('--ang', ang + 'deg')
+    comet.style.setProperty('--dx', (Math.cos(ang * Math.PI / 180) * 150) + 'px')
+    comet.style.setProperty('--dy', (Math.sin(ang * Math.PI / 180) * 150) + 'px')
+    comet.style.display = ''
+    comet.style.animation = 'none'
+    void comet.offsetHeight
+    comet.style.animation = ''
+    setTimeout(() => { comet.style.display = 'none' }, 1200)
   }
 
   setInterval(spawn, 8000)

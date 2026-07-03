@@ -31,7 +31,7 @@ export async function onRequest(context: { request: Request; env: Env }): Promis
   } catch (e) {
     console.error('Seats API error:', e instanceof Error ? e.message : e)
     return new Response(JSON.stringify({ seats: DEFAULT_SEATS_LEFT }), {
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-cache' },
     })
   }
 }

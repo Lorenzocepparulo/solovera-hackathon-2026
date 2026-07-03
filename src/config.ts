@@ -2,7 +2,7 @@ export const CONFIG = {
   LAUNCH_DATE: new Date('2026-09-26T07:00:00Z'),
   TOTAL_SEATS: 20,
   DEFAULT_SEATS_LEFT: 17,
-  BASE_URL: 'https://hackaton.solovera.work',
+  BASE_URL: 'https://hackathon.solovera.work',
   PRIZE_TARGET: 5000,
 }
 

@@ -5,10 +5,14 @@ export function initStars(): void {
   const ctx = c.getContext('2d')
   if (!ctx) return
 
+  const dpr = window.devicePixelRatio || 1
   let W = window.innerWidth
   let H = window.innerHeight
-  c.width = W
-  c.height = H
+  c.width = W * dpr
+  c.height = H * dpr
+  c.style.width = W + 'px'
+  c.style.height = H + 'px'
+  ctx.scale(dpr, dpr)
 
   interface Star {
     x: number
@@ -19,7 +23,7 @@ export function initStars(): void {
   }
 
   const stars: Star[] = []
-  for (let i = 0; i < 200; i++) {
+  for (let i = 0; i < 80; i++) {
     stars.push({
       x: Math.random() * W,
       y: Math.random() * H,
@@ -29,7 +33,11 @@ export function initStars(): void {
     })
   }
 
+  let paused = false
+  let raf = 0
+
   function draw(): void {
+    if (paused) return
     if (!ctx) return
     ctx.clearRect(0, 0, W, H)
     for (const s of stars) {
@@ -39,15 +47,42 @@ export function initStars(): void {
       ctx.fillStyle = `rgba(244,242,255,${s.a * p})`
       ctx.fill()
     }
-    requestAnimationFrame(draw)
+    raf = requestAnimationFrame(draw)
   }
+
+  function start(): void {
+    if (!paused) return
+    paused = false
+    raf = requestAnimationFrame(draw)
+  }
+
+  function stop(): void {
+    paused = true
+    if (raf) cancelAnimationFrame(raf)
+  }
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) stop()
+    else start()
+  })
 
   draw()
 
+  let resizeTimer: ReturnType<typeof setTimeout>
   window.addEventListener('resize', () => {
-    W = window.innerWidth
-    H = window.innerHeight
-    c.width = W
-    c.height = H
+    clearTimeout(resizeTimer)
+    resizeTimer = setTimeout(() => {
+      W = window.innerWidth
+      H = window.innerHeight
+      c.width = W * dpr
+      c.height = H * dpr
+      c.style.width = W + 'px'
+      c.style.height = H + 'px'
+      ctx.scale(dpr, dpr)
+      for (const s of stars) {
+        s.x = Math.random() * W
+        s.y = Math.random() * H
+      }
+    }, 200)
   })
 }
