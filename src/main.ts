@@ -6,7 +6,7 @@ import { initReveal } from './modules/reveal'
 import { initStickyCta } from './modules/sticky-cta'
 import { initShip } from './modules/ship'
 import { initForm } from './modules/form'
-import { initComets } from './modules/comets'
+
 import { initStars } from './modules/stars'
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -19,6 +19,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initStickyCta()
   initShip()
   initForm()
-  initComets()
   initStars()
 })

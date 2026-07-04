@@ -420,22 +420,9 @@ box-shadow:387px 1878px #fff,760px 1564px #fff,1487px 999px #fff,948px 1828px #f
  .lo-cd{
  font-size:1rem;color:var(--solar);letter-spacing:.14em;margin-bottom:36px;
  }
- /* ---------- COMETS ---------- */
- .comet{
- position:fixed;z-index:1;pointer-events:none;
- width:130px;height:2px;border-radius:2px;
- background:linear-gradient(90deg,rgba(244,242,255,0),#F4F2FF);
- transform-origin:right center;
- animation:comet-fly 1.1s ease-out forwards;
- }
- @keyframes comet-fly{
- from{opacity:0;transform:translate(0,0) rotate(var(--ang)) scaleX(.3)}
- 12%{opacity:1}
- to{opacity:0;transform:translate(var(--dx),var(--dy)) rotate(var(--ang)) scaleX(1)}
- }
- @media (prefers-reduced-motion: reduce){
- .comet{display:none}
- .lo-stars{animation:none}
+
+  @media (prefers-reduced-motion: reduce){
+  .lo-stars{animation:none}
  .launch-overlay.launching .lo-rocket{animation:none;display:none}
  .lo-text{opacity:1;transform:none;transition:none}
  }
