@@ -8,6 +8,7 @@ import { initShip } from './modules/ship'
 import { initForm } from './modules/form'
 
 import { initStars } from './modules/stars'
+import { initWarp } from './modules/warp'
 
 document.addEventListener('DOMContentLoaded', () => {
   updateSeatsDisplay(CONFIG.DEFAULT_SEATS_LEFT)
@@ -20,4 +21,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initShip()
   initForm()
   initStars()
+  initWarp()
 })
