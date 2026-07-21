@@ -1,5 +1,5 @@
 export const CONFIG = {
-  LAUNCH_DATE: new Date('2026-09-26T07:00:00Z'),
+  LAUNCH_DATE: new Date('2026-10-03T07:00:00Z'),
   TOTAL_SEATS: 20,
   DEFAULT_SEATS_LEFT: 17,
   BASE_URL: 'https://hackathon.solovera.work',
